@@ -47,11 +47,10 @@ const ListingCard = ({
 
   const isLiked = wishList?.find((item) => item?._id === listingId);
 
-  const patchWishList = async () => {
-    if (user?._id !== creator) {
+const patchWishList = async () => {
+  if (user?._id !== creator) {
     const response = await fetch(
-      `const response = await fetch(
-  `https://househunt-8vj2.onrender.com/users/${user?._id}/${listingId}`,
+      `https://househunt-8vj2.onrender.com/users/${user?._id}/${listingId}`,
       {
         method: "PATCH",
         headers: {
@@ -59,11 +58,13 @@ const ListingCard = ({
         },
       }
     );
+
     const data = await response.json();
     dispatch(setWishList(data.wishList));
-  } else { return }
-  };
-
+  } else {
+    return;
+  }
+};
   return (
     <div
       className="listing-card"
