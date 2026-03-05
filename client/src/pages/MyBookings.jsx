@@ -11,7 +11,7 @@ const MyBookings = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       const res = await fetch(
-        `http://localhost:3001/bookings/customer/${user._id}`
+        `https://househunt-8vj2.onrender.com/bookings/customer/${user._id}`
       );
       const data = await res.json();
       setBookings(data);
