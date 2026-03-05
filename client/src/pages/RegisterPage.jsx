@@ -48,7 +48,7 @@ const RegisterPage = () => {
       // Append role
       register_form.append("role", role);
 
-      const response = await fetch("http://localhost:3001/auth/register", {
+      const response = await fetch("https://househunt-8vj2.onrender.com/auth/register", {
         method: "POST",
         body: register_form,
       });
