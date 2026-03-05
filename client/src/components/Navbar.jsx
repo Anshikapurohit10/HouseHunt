@@ -68,7 +68,7 @@ const Navbar = () => {
       <Person sx={{ color: variables.darkgrey }} />
     ) : (
       <img
-        src={`http://localhost:3001/${user.profileImagePath.replace("public", "")}`}
+        src={`https://househunt-backend.onrender.com/${user.profileImagePath.replace("public", "")}`}
         alt="profile photo"
         style={{ objectFit: "cover", borderRadius: "50%" }}
       />
