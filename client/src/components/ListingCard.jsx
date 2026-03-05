@@ -54,7 +54,7 @@ const ListingCard = ({
   `https://househunt-8vj2.onrender.com/users/${user?._id}/${listingId}`,
       {
         method: "PATCH",
-        header: {
+        headers: {
           "Content-Type": "application/json",
         },
       }
