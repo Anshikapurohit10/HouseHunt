@@ -51,7 +51,7 @@ const ListingCard = ({
     if (user?._id !== creator) {
     const response = await fetch(
       `const response = await fetch(
-  `https://househunt-backend.onrender.com/users/${user?._id}/${listingId}`,
+  `https://househunt-8vj2.onrender.com/users/${user?._id}/${listingId}`,
       {
         method: "PATCH",
         header: {
@@ -79,7 +79,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`https://househunt-backend.onrender.com/${photo?.replace("public", "")}`}
+                src={`https://househunt-8vj2.onrender.com/${photo?.replace("public", "")}`}
                 alt={`photo ${index + 1}`}
               />
               <div
