@@ -18,7 +18,7 @@ const ReservationList = () => {
     if (!userId) return;
 
     try {
-      const response = await fetch(`http://localhost:3001/users/${userId}/reservations`);
+      const response = await fetch(`https://househunt-8vj2.onrender.com/users/${userId}/reservations`);
       if (!response.ok) throw new Error("Failed to fetch reservations");
 
       const data = await response.json();
