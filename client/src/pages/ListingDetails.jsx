@@ -20,7 +20,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/properties/${listingId}`,
+        `https://househunt-8vj2.onrender.com/properties/${listingId}`,
         {
           method: "GET",
         }
@@ -66,7 +66,7 @@ const user = useSelector((state) => state?.user)
 const handleDelete = async () => {
   try {
     const res = await fetch(
-      `http://localhost:3001/properties/${listingId}`,
+      `https://househunt-8vj2.onrender.com/properties/${listingId}`,
       {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
@@ -86,32 +86,7 @@ const handleDelete = async () => {
     console.log("Delete failed:", err.message);
   }
 };
-  // const handleSubmit = async () => {
-  //   try {
-  //     const bookingForm = {
-  //       customerId,
-  //       listingId,
-  //       hostId: listing.creator._id,
-  //       startDate: dateRange[0].startDate.toDateString(),
-  //       endDate: dateRange[0].endDate.toDateString(),
-  //       totalPrice: listing.price * dayCount,
-  //     }
-
-  //     const response = await fetch("http://localhost:3001/bookings/create", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(bookingForm)
-  //     })
-
-  //     if (response.ok) {
-  //       navigate(`/${customerId}/trips`)
-  //     }
-  //   } catch (err) {
-  //     console.log("Submit Booking Failed.", err.message)
-  //   }
-  // }
+  
 
   return loading ? (
     <Loader />
@@ -128,7 +103,7 @@ const handleDelete = async () => {
         <div className="photos">
           {listing.listingPhotoPaths?.map((item) => (
             <img
-              src={`http://localhost:3001/${item.replace("public", "")}`}
+              src={`https://househunt-8vj2.onrender.com/${item.replace("public", "")}`}
               alt="listing photo"
             />
           ))}
@@ -146,7 +121,7 @@ const handleDelete = async () => {
 
         <div className="profile">
           <img
-            src={`http://localhost:3001/${listing.creator.profileImagePath.replace(
+            src={`https://househunt-8vj2.onrender.com/${listing.creator.profileImagePath.replace(
               "public",
               ""
             )}`}
