@@ -18,7 +18,7 @@ const Properties = () => {
   useEffect(() => {
     const fetchListings = async () => {
       try {
-        const res = await fetch("http://localhost:3001/properties");
+        const res = await fetch("https://househunt-8vj2.onrender.com/properties");
         const data = await res.json();
         setListings(data);
       } catch (err) {
@@ -39,7 +39,7 @@ const Properties = () => {
   const handleDelete = async (listing) => {
     try {
       const res = await fetch(
-        `http://localhost:3001/properties/${listing}`,
+        `https://househunt-8vj2.onrender.com/${listing}`,
         {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
@@ -115,7 +115,7 @@ const Properties = () => {
                 onClick={async () => {
                   try {
                     const res = await fetch(
-                      "http://localhost:3001/bookings",
+                      "https://househunt-8vj2.onrender.com/bookings",
                       {
                         method: "POST",
                         headers: {
