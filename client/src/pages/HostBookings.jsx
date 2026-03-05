@@ -9,7 +9,7 @@ const HostBookings = () => {
 
   const fetchRequests = async () => {
     const res = await fetch(
-      `http://localhost:3001/bookings/host/${user._id}`
+      `https://househunt-8vj2.onrender.com/bookings/host/${user._id}`
     );
     const data = await res.json();
     setRequests(data);
@@ -20,7 +20,7 @@ const HostBookings = () => {
   }, [user]);
 
   const updateStatus = async (bookingId, status) => {
-    await fetch(`http://localhost:3001/bookings/${bookingId}`, {
+    await fetch(`https://househunt-8vj2.onrender.com/bookings/${bookingId}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ status }),
