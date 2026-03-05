@@ -1,0 +1,1 @@
+app.use("/bookings", require("./routes/booking"));
