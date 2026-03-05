@@ -22,7 +22,7 @@ const PropertyList = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/users/${user._id}/properties`,
+        `https://househunt-8vj2.onrender.com/users/${user._id}/properties`,
         { method: "GET" }
       );
 
