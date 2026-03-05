@@ -18,8 +18,8 @@ const Listings = () => {
     try {
       const response = await fetch(
         selectedCategory !== "All"
-          ? `https://househunt-backend.onrender.com/properties?category=${selectedCategory}`
-          : "https://househunt-backend.onrender.com/properties",
+          ? `https://househunt-8vj2.onrender.com/properties?category=${selectedCategory}`
+          : "https://househunt-8vj2.onrender.com/properties",
         {
           method: "GET",
         }
