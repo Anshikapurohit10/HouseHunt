@@ -111,7 +111,7 @@ if (!type) {
 
     try {
       const response = await fetch(
-        "http://localhost:3001/properties/create",
+        "https://househunt-8vj2.onrender.com/properties/create",
         {
           method: "POST",
           body: formData,
